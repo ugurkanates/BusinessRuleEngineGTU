@@ -1,11 +1,4 @@
-c FILE: aim-100-1_6-no-1.cnf
-c
-c SOURCE: Kazuo Iwama, Eiji Miyano (miyano@cscu.kyushu-u.ac.jp),
-c          and Yuichi Asahiro
-c
-c DESCRIPTION: Artifical instances from generator by source.  Generators
-c              and more information in sat/contributed/iwama.
-c
+
 c NOTE: Not Satisfiable
 c
 p cnf 100 160
