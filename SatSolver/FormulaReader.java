@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 public class FormulaReader {
 
-    private int[][] formula;
+    private int[][] formula;    //formula array
     private int numVars, numClauses;
 
     public void read(String file) {
