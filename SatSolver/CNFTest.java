@@ -43,4 +43,15 @@ public class CNFTest {
         assertEquals(cnf.checkingData("123a1"),false);
     }
 
+    @Test
+    public void test_clearString() throws Exception {
+        System.out.println("clearString");
+        String var,expected;
+        expected ="5548(58)";
+        var = "55   48  (   58  ) ";
+        CNF cnf = new CNF(var);
+        cnf.clearString();
+        String result = cnf.getData();
+        assertEquals(expected, result);
+    }
 }
