@@ -20,3 +20,12 @@ public class isTotoloji{
         return checker;
     }
 //first commit
+    public boolean theChecker(String clause){
+        ArrayList<Integer> eachNumber = new ArrayList<Integer>();
+        clause = clause.replace("(","");
+        clause = clause.replace(")","");
+        eachClause = clause.split(",");
+        for(int i=0;i<eachClause.length;i++){
+            eachNumber.add(Integer.parseInt(eachClause[i]));
+        }
+//second commit
