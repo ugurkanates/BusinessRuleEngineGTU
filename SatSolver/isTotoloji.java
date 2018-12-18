@@ -29,3 +29,17 @@ public class isTotoloji{
             eachNumber.add(Integer.parseInt(eachClause[i]));
         }
 //second commit
+
+    // buraya kadar konrol yok
+
+        for(int i=0;i<eachNumber.size();i++){
+
+            for(int j=i+1;j<eachNumber.size();j++){
+                if(eachNumber.get(i).equals(-eachNumber.get(j)))
+                    return true;
+            }
+        }
+
+        return false;
+    }
+//third commit
