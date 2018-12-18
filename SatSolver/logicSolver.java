@@ -36,11 +36,11 @@ public class logicSolver {
         FalseFlag=0;
         for (int i = 0; i < eachClause.length; i++) {
 
-            if(!(eachClause[i].equals("T")) && !(eachClause[i].equals("F"))&& !(eachClause[i].equals("-F"))&& !(eachClause[i].equals("-T")) ) {
+            if(!(eachClause[i].equals("T")) && !(eachClause[i].equals("F")) ) {
                 FalseFlag=1;
                 eachNumber.add(Integer.parseInt(eachClause[i]));
             }
-            else if(eachClause[i].equals("T")||eachClause[i].equals("-F")){
+            else if(eachClause[i].equals("T")){
                 TrueFlag=1;
                 FalseFlag=1;
                 break;
