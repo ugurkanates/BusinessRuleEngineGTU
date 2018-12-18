@@ -33,7 +33,7 @@ public class RelativeChecker{
 				String currentRelative = Character.toString(rule.charAt(i));
 				
 				int j;
-				for (j = i+1; isNumber(rule.charAt(j)) == true && j <= rule.length(); ++j) {
+		                for (j = i+1; j < rule.length() && isNumber(rule.charAt(j)) == true; ++j) {
 					currentRelative += (rule.charAt(j));
 				}
 				i = j;
