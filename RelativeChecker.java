@@ -18,7 +18,7 @@ import java.util.ListIterator;
 public class RelativeChecker{
 	/* test */
 	public static void main(String[] args) {
-		boolean result = areRelativesCorrect("rule.txt", "(46,44).(-57,-58).(-155,154,153)");
+		boolean result = areRelativesCorrect("(46,44).(-57,-58).(-155,154,153)","(45,57,58,155,154,153)");
 		System.out.println("result is " + result);
 	}
 
