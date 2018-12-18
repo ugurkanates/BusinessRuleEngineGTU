@@ -7,7 +7,7 @@ package relativechecker;
 
 /**
  *
- * @author CEM
+ * @author CAN
  */
 
 import java.util.Scanner;
