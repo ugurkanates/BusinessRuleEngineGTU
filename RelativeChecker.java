@@ -1,5 +1,8 @@
 public class RelativeChecker{
 
+	private static boolean isNumber(char param){
+		return (param >= '0' && param <= '9');
+	}
 	private static LinkedList<Integer> relativeParser(String rule){
 		LinkedList<Integer> result = new LinkedList<Integer>();
 		for (int i = 0; i < rule.length(); ++i) {
