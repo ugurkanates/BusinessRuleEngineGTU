@@ -43,3 +43,17 @@ public class isTotoloji{
         return false;
     }
 //third commit
+    public static void main(String[] args) {
+
+        String string = "(34).(12,-12)";
+        String string2 = "(34,512,156)";
+        isTotoloji obje = new isTotoloji();
+        obje.theLoop(string);
+        System.out.println("checker is = "+obje.checker);
+        // obje.theLoop(string);
+
+
+    }
+
+}
+    
