@@ -48,6 +48,8 @@ public class CNF {
         return result;
     }
 
+    protected void clearString(){}
+
 
 
    
