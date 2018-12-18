@@ -49,7 +49,25 @@ public class CNF {
         // Length is a zero then return false directly.
         if(var.length()==0)
             return false;
-
+        if (var.charAt(0) != '(' || var.charAt(var.length() - 1) != ')') {
+            result = false;
+        }
+        else {
+            int oldIndex = 1;
+            if (var.contains(",")) {
+                for (int i = oldIndex; i < var.length() - 1 && result == true; ++i) {
+                    if (var.charAt(i) == ',') {
+                        if (!checkingData(var.substring(oldIndex, i)))
+                            result = false;
+                        oldIndex = i + 1;
+                    }
+                }
+            }
+            else {
+                if (!checkingData(var.substring(oldIndex, var.length() - 1)))
+                    result = false;
+            }
+        }
         return result;
     }
 
