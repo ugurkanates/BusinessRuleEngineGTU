@@ -84,7 +84,7 @@ public class CNF {
 
     }
 
-        protected boolean checkingData(String var){
+    protected boolean checkingData(String var){
         boolean result=true;
         if(var.length()==0)
             return false;
