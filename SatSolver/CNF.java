@@ -102,6 +102,42 @@ public class CNF {
     }
 
     public static void main(String args[]){
-    
+    /*
+        String []elements = new String[16];
+        elements[0]="(1)";
+        elements[1]="())";
+        elements[2]="(2)..(3,-45)";
+        elements[3]=",(34,,-45)";
+        elements[4]="(!1??*,23,-5)";
+        elements[5]="";
+        elements[6]=null;
+        elements[7]="\t(1\t )2";
+        elements[8]="()";
+        elements[9]="\t(\t1,-21323,-66).\t(3,4,-6)";
+        elements[10]="";
+        elements[11]="(,).(.)";
+        elements[12]="(,).(,)";
+        elements[13]="(.),(.)";
+        elements[14]="(2.3).,(-3453323213132,3)";
+        elements[15]="null";
+        for(String s:elements) {
+            try {
+                System.out.print(s + " --->\t");
+                CNF example = new CNF(s);
+                System.out.println(example.cnfFormat());
+            }
+            catch(Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
+        try {
+            System.out.println("---No parameter constructor---");
+            CNF example = new CNF();
+            System.out.println(example.cnfFormat());
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        */
     }
 }
