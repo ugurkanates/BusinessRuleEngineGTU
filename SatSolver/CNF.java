@@ -80,8 +80,11 @@ public class CNF {
     }
 
 
-    protected void clearString(){
-
+    protected void clearString()throws Exception{
+        if(data.length()==0)
+            throw new Exception("Data size is 0.");
+        data=data.replaceAll(" ","");
+        data=data.replaceAll("\t","");
     }
 
     protected boolean checkingData(String var){
