@@ -84,6 +84,20 @@ public class CNF {
 
     }
 
+        protected boolean checkingData(String var){
+        boolean result=true;
+        if(var.length()==0)
+            return false;
+        int start = 0;
+        if (var.charAt(0) == '-')
+            start = 1;
+        for (int i = start; i < var.length(); ++i) {
+            if (var.charAt(i) < '0' || var.charAt(i) > '9')
+                result = false;
+        }
+        return result;
+    }
+
     public static void main(String args[]){
     
     }
