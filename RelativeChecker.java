@@ -1,8 +1,31 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package relativechecker;
+
+/**
+ *
+ * @author CEM
+ */
+
+import java.util.Scanner;
+import java.io.File;
+import java.util.LinkedList;
+import java.util.ListIterator;
+
 public class RelativeChecker{
+	/* test */
+	public static void main(String[] args) {
+		boolean result = areRelativesCorrect("rule.txt", "(46,44).(-57,-58).(-155,154,153)");
+		System.out.println("result is " + result);
+	}
 
 	private static boolean isNumber(char param){
 		return (param >= '0' && param <= '9');
 	}
+
 	private static LinkedList<Integer> relativeParser(String rule){
 		LinkedList<Integer> result = new LinkedList<Integer>();
 		for (int i = 0; i < rule.length(); ++i) {
@@ -21,17 +44,10 @@ public class RelativeChecker{
 		ListIterator it = result.listIterator();
 		return result;
 	}
-	
-	
-	public static boolean areRelativesCorrect(String filename, String relatives){
-		try {
-			File file = new File(filename);
-            Scanner scan = new Scanner(filename);
-            scan = new Scanner(file);
 
-            while (scan.hasNextLine()) {
-                String line = scan.nextLine();
-                LinkedList<Integer> relativesFromFile = relativeParser(line);
+	public static boolean areRelativesCorrect(String rule, String relatives){
+		
+                LinkedList<Integer> relativesFromFile = relativeParser(rule);
                 
                 LinkedList<Integer> relativesList = relativeParser(relatives);
                 LinkedList shortlist;
@@ -61,12 +77,13 @@ public class RelativeChecker{
 	            	}
 	            	it2 = shortlist.listIterator(0);
 	            }
-	            
+	          return true;  
             }
-            scan.close();
-        } catch (Exception ex) {
-            ex.printStackTrace();
+
         }
-    	return true;
-	}
-}
+    	
+
+
+    
+
+
