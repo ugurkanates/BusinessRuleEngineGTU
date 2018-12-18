@@ -9,10 +9,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author CEM
- */
 public class RelativeCheckerTest {
     
     public RelativeCheckerTest() {
@@ -30,8 +26,8 @@ public class RelativeCheckerTest {
      */
     @Test
     public void testAreRelativesCorrect() {
-        Assert.assertEquals(true,RelativeChecker.areRelativesCorrect("rule.txt", "(46,44,-57,-58,-155,154,153)"));
-        Assert.assertEquals(false,RelativeChecker.areRelativesCorrect("rule.txt", "(45,-57,-58,-155,154,153)"));
+        Assert.assertEquals(true,RelativeChecker.areRelativesCorrect("(46,44,-57,-58,-155,154,153)", "(46,44,-57,-58,-155,154,153)"));
+        Assert.assertEquals(false,RelativeChecker.areRelativesCorrect("(45,-57,-58,-155,154,153)", "(45,-57,-58,-155,154,153)"));
     }
     
 }

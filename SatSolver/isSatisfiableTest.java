@@ -1,4 +1,5 @@
 package issatisfiable;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -6,6 +7,7 @@ class isSatisfiableTest {
 
     @Test
     void isCNFSatisfiable() {
+        
         //unsatisfiable, NOT cnf
         isSatisfiable isSat = new isSatisfiable("(1,2,3).(1,2,-3).(1,-2,3).(1,-2,-3).(-1,2,3).(-1,2,-3).(-1,-2,3).(-1,-2,-3)",false);
         assertEquals(false, isSat.isCNFSatisfiable());
