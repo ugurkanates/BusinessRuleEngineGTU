@@ -85,12 +85,13 @@ public class Business {
 
         */
 
-         
+
 
     }
 
 
-    boolean firstCheck(String rule,String relative){
+   // return values : "true","false","total"
+    public String firstCheck(String rule,String relative){
 
         // relativeleri en son andlicez tek satırnda return yapcaz
         boolean sonuc = false;
@@ -98,19 +99,19 @@ public class Business {
         isTotoloji obje2 = new isTotoloji();
         sonuc = obje.cnfFormat() ;
         if (!sonuc) {
-            return false;
+            return "false";
         }
 
         sonuc = sonuc && RelativeChecker.areRelativesCorrect(rule,relative);
         if (!sonuc) {
 
-            return false;
+            return "false";
 
         }
         //totoloji grubu !
         if(obje2.theLoop(rule)) {
             setTotoloji(true);
-            return true;
+            return "total";
         }
 
 
@@ -120,12 +121,12 @@ public class Business {
         sonuc = sonuc && obje3.isCNFSatisfiable();
         if (!sonuc) {
 
-            return false;
+            return "false";
         }
 
 
 
-        return sonuc;
+        return "true";
 
 
 
@@ -154,10 +155,18 @@ public class Business {
             rule.set(Integer.parseInt(ruleID),rule.get((Integer.parseInt(ruleID))).replaceAll("\\(" + kisiID + "\\)", "(F)"));
         }
         setSolverResult(obje.theLoop(rule.get((Integer.parseInt(ruleID)))));
-        System.out.println(getSolverResult());
-        System.out.println(rule.get((Integer.parseInt(ruleID))));
+        switch(getSolverResult()){
+            case 0:
+                return "true";
+            case 1:
+                return "false";
+            case 2:
+                return "wait";
 
-        return ruleID;
+        }
+        //System.out.println(rule.get((Integer.parseInt(ruleID))));
+
+        return null; // THIS IS ERROR CASE btw
     }
 
     public boolean isTotoloji() {
