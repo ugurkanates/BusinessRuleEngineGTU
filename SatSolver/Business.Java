@@ -79,8 +79,8 @@ public class Business {
         /*
          IKINCI OLAY obje.SOLVER(KISIID,CEVAP(T/F),ruleID)
           0 1 2 3 donduruyor
-          0 true
-          1 false
+          0 false
+          1 true
           2 wait
 
         */
