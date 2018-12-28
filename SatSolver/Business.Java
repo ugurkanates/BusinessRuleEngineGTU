@@ -157,9 +157,9 @@ public class Business {
         setSolverResult(obje.theLoop(rule.get((Integer.parseInt(ruleID)))));
         switch(getSolverResult()){
             case 0:
-                return "true";
-            case 1:
                 return "false";
+            case 1:
+                return "true";
             case 2:
                 return "wait";
 
