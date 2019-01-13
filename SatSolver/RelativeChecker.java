@@ -35,39 +35,14 @@ public class RelativeChecker{
 	}
 
 	public static boolean areRelativesCorrect(String rule, String relatives){
-		
-                LinkedList<Integer> relativesFromFile = relativeParser(rule);
-                
-                LinkedList<Integer> relativesList = relativeParser(relatives);
-                LinkedList shortlist;
-	            ListIterator it, it2;
-	            if (relativesList.size() < relativesFromFile.size()){
-	            	it = relativesFromFile.listIterator();
-	            	it2 = relativesList.listIterator();
-	            	shortlist = relativesList;
-	            }
-	            else{
-	            	it2 = relativesFromFile.listIterator();
-	            	it = relativesList.listIterator();
-	            	shortlist = relativesFromFile;
-	            }
-	            while(it.hasNext()){
-	            	boolean relativeExists = false;
-	            	Integer currentRelative = (Integer)it.next();
-	            	while(it2.hasNext()){
-		            	Integer currentRelative2 = (Integer)it2.next();
-		            	if(currentRelative.equals(currentRelative2)){
-		            		relativeExists = true;
-		            		break;
-		            	}
-	            	}
-	            	if(relativeExists == false){
-	            		return false;
-	            	}
-	            	it2 = shortlist.listIterator(0);
-	            }
-	          return true;  
-            }
 
+        LinkedList<Integer> relativesFromFile = relativeParser(rule);
+        LinkedList<Integer> relativesList = relativeParser(relatives);
+        for(int i=0;i<relativesList.size();i++){
+            if(!relativesFromFile.contains(relativesList.get(i)))
+                return false;
         }
+        return true;
+    	}
+}
     	
